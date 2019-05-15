@@ -23,5 +23,10 @@ sample project of a comic book gallery to better understand concepts of .NET MVC
   <li><p>ContentResult - This one returns strings passed to it in round brackets. It can also be wriiten as return Content("<content>")</p></li>
   </ul>
   </p></li>
+  <li><p>Just Like our URL Routing for COntrollers, MVC tries to find the
+  views in Views/<controller name>/<method name>.cshtml</p>
+  <p>We use RAZOR pages which are a mix of csharp and html both to create such
+  views. When we return a View object from Detail method,MVC,by convention searches
+  for our view like above mentioned. Also note that, ViewResult is another type of ActionResult object and can be written as return View()</p> </li>
 
 </ul>
