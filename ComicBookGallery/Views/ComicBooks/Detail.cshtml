@@ -25,12 +25,16 @@
     <div>
         <h1>Hello from our view</h1>
         <p>@Html.Raw(description)</p>
-        <ul>
-            @foreach(var artist in artists)
-            {
-               <li>@artist</li>
-            }
-        </ul>
+        @if (artists.Length > 0)
+        {
+            <ul>
+                @foreach (var artist in artists)
+                {
+                    <li>@artist</li>
+                }
+            </ul>
+        }
+
     </div>
 </body>
 </html>
