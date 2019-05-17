@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ComicBookGallery.Models.ComicBook
+@{
 
     Layout = "~/Views/Shared/_Layout.cshtml";
 
@@ -6,14 +7,15 @@
 
 
 
-        <h1>ViewBag.Title</h1>
-        <p>@Html.Raw(ViewBag.description)</p>
-        @if (ViewBag.artists.Length > 0)
+        <h1>@Model.DisplayText</h1>
+        
+        <p>@Html.Raw(@Model.DescriptionHtml)</p>
+        @if (@Model.Artists.Length > 0)
         {
             <ul>
-                @foreach (var artist in ViewBag.artists)
+                @foreach (var artist in @Model.Artists)
                 {
-                    <li>@artist</li>
+                    <li>@artist.Name : @artist.Role</li>
                 }
             </ul>
         }
