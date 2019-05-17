@@ -9,6 +9,7 @@ namespace ComicBookGallery.Controllers
     {
         public ActionResult Detail()
         {
+            ViewBag.Title = "The Amazing Spider Man";
             return View();
         }
 
